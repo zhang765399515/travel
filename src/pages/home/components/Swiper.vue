@@ -2,7 +2,7 @@
   <div class="wrapper">
     <swiper :options="swiperOption">
       <!-- slides -->
-      <swiper-slide v-for="item of swiperList">
+      <swiper-slide v-for="(item,index) of swiperList"  :key='index'>
         <img
           class="swiper-img"
           :src="item.imgUrl"
@@ -22,12 +22,12 @@ export default {
       swiperOption: {
         pagination: '.swiper-pagination'
       },
-      swiperList:[{
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1802/e3/62ce7362ca051d02.jpg_640x200_6db551b7.jpg'
-      },{
-          id: '0002',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1802/e3/62ce7362ca051d02.jpg_640x200_6db551b7.jpg'
+      swiperList: [{
+        id: '0001',
+        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1802/e3/62ce7362ca051d02.jpg_640x200_6db551b7.jpg'
+      }, {
+        id: '0002',
+        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1802/e3/62ce7362ca051d02.jpg_640x200_6db551b7.jpg'
       }]
     }
   }
